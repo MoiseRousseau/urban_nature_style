@@ -1,21 +1,9 @@
-@power-line-color: #888;
+@power-line-color: #000000;
 
 #power-line {
-  [zoom >= 14] {
+  [zoom >= 8] {
     line-width: 0.5;
     line-color: @power-line-color;
-    [zoom >= 15] {
-      line-width: 0.6;
-    }
-    [zoom >= 16] {
-      line-width: 0.7;
-    }
-    [zoom >= 18] {
-      line-width: 1;
-    }
-    [zoom >= 19] {
-      line-width: 1.2;
-    }
   }
 }
 
