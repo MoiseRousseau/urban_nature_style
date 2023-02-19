@@ -1,61 +1,61 @@
 // --- Parks, woods, other green things ---
 
-@grass: darken(@forest, 5%);        // Lch(90,32,128) also grassland, meadow, village_green, garden, allotments
-@scrub: darken(@forest, 5%);        // Lch(84,24,122)
+@grass: #4a646c;        // Lch(90,32,128) also grassland, meadow, village_green, garden, allotments
+@scrub: darken(@forest, 2%);        // Lch(84,24,122)
 @forest: #00ff7f;       // Lch(80,30,135)
-@forest-text: #00ff7f;  // Lch(40,30,135)
-@park: darken(@forest, 5%);  // Lch(94,30,145)
-@allotments: darken(@forest, 5%);  // Lch(87,20,135)
-@orchard: darken(@forest, 5%);  // also vineyard, plant_nursery
+@forest-text: @forest;  // Lch(40,30,135)
+@park: darken(@forest, 2%);  // Lch(94,30,145)
+@allotments: darken(@forest, 2%);  // Lch(87,20,135)
+@orchard: darken(@forest, 2%);  // also vineyard, plant_nursery
 @hedge: @forest;       // Lch(80,30,135)
 
 // --- "Base" landuses ---
 
-@built-up-lowzoom: #4a646c;
-@built-up-z12: #4a646c;
-@residential: #4a646c;      // Lch(89,0,0)
-@residential-line: #4a646c; // Lch(75,0,0)
-@retail: #4a646c;           // Lch(89,16,30)
-@retail-line: #4a646c;      // Lch(70,25,30)
-@commercial: #4a646c;       // Lch(89,8.5,25)
-@commercial-line: #4a646c;  // Lch(75,12,25)
-@industrial: #4a646c;       // Lch(89,9,330) (Also used for railway, wastewater_plant)
-@industrial-line: #4a646c;  // Lch(75,11,330) (Also used for railway-line, wastewater_plant-line)
-@farmland: #4a646c;         // Lch(94,14,112)
-@farmland-line: #4a646c;    // Lch(80,14,112)
-@farmyard: #4a646c;         // Lch(89,20,80)
-@farmyard-line: #4a646c;    // Lch(75,25,80)
+@built-up-lowzoom: @grass;
+@built-up-z12: @grass;
+@residential: @grass;      // Lch(89,0,0)
+@residential-line: @grass; // Lch(75,0,0)
+@retail: @grass;           // Lch(89,16,30)
+@retail-line: @grass;      // Lch(70,25,30)
+@commercial: @grass;       // Lch(89,8.5,25)
+@commercial-line: @grass;  // Lch(75,12,25)
+@industrial: @grass;       // Lch(89,9,330) (Also used for railway, wastewater_plant)
+@industrial-line: @grass;  // Lch(75,11,330) (Also used for railway-line, wastewater_plant-line)
+@farmland: @grass;         // Lch(94,14,112)
+@farmland-line: @grass;    // Lch(80,14,112)
+@farmyard: @grass;         // Lch(89,20,80)
+@farmyard-line: @grass;    // Lch(75,25,80)
 
 // --- Transport ----
 
-@transportation-area: #4a646c;
-@apron: #4a646c;
-@garages: #4a646c;
-@parking: #4a646c;
+@transportation-area: @grass;
+@apron: @grass;
+@garages: @grass;
+@parking: @grass;
 @parking-outline: saturate(darken(@parking, 40%), 20%);
 @railway: @industrial;
 @railway-line: @industrial-line;
-@rest_area: #4a646c; // also services
+@rest_area: @grass; // also services
 
 // --- Other ----
 
-@bare_ground: #4a646c;
-@campsite: #4a646c; // also caravan_site, picnic_site
-@cemetery: #4a646c; // also grave_yard
-@construction: #4a646c; // also brownfield
-@heath: #4a646c;
-@mud: rgba(203,177,154,0.3); // produces #e6dcd1 over @land
-@place_of_worship: #4a646c; // also landuse_religious
-@place_of_worship_outline: darken(@place_of_worship, 30%);
+@bare_ground: @grass;
+@campsite: @grass; // also caravan_site, picnic_site
+@cemetery: @grass; // also grave_yard
+@construction: @grass; // also brownfield
+@heath: @grass;
+@mud: @grass ; // produces @grass over @land
+@place_of_worship: @grass; // also landuse_religious
+@place_of_worship_outline: darken(@place_of_worship, 5%);
 @leisure: lighten(@park, 5%);
 @power: darken(@industrial, 5%);
 @power-line: darken(@industrial-line, 5%);
-@sand: #f5e9c6;
-@societal_amenities: #4a646c;   // Lch(99,13,109)
-@tourism: #4a646c;
-@quarry: #4a646c;
-@military: #4a646c;
-@beach: #4a646c;
+@sand: #ffd700;
+@societal_amenities: @grass;   // Lch(99,13,109)
+@tourism: @grass;
+@quarry: @grass;
+@military: @grass;
+@beach: @grass;
 @wastewater_plant: @industrial;
 @wastewater_plant-line: @industrial-line;
 @water_works: @industrial;
@@ -63,7 +63,7 @@
 
 // --- Sports ---
 
-@pitch: #ffc0cb;           // Lch(85,22,168) also track
+@pitch: #f8f8ff;           // Lch(85,22,168) also track
 @track: @pitch;
 @stadium: @leisure; // also sports_centre
 @golf_course: @campsite;
@@ -130,12 +130,6 @@
       polygon-fill: @orchard;
       [way_pixels >= 4]  { polygon-gamma: 0.75; }
       [way_pixels >= 64] { polygon-gamma: 0.3;  }
-    }
-    [zoom >= 13] {
-      polygon-pattern-file: url('patterns/vineyard.svg');
-      polygon-pattern-alignment: global;
-      [way_pixels >= 4]  { polygon-pattern-gamma: 0.75; }
-      [way_pixels >= 64] { polygon-pattern-gamma: 0.3;  }
     }
   }
 
@@ -474,7 +468,7 @@
 
   [feature = 'landuse_landfill'] {
     [zoom >= 10] {
-      polygon-fill: #b6b592;
+      polygon-fill: @grass;
       [way_pixels >= 4]  { polygon-gamma: 0.75; }
       [way_pixels >= 64] { polygon-gamma: 0.3;  }
     }
@@ -677,7 +671,7 @@
       [way_pixels >= 64] { polygon-gamma: 0.3;  }
       [zoom >= 13] {
         line-width: 0.3;
-        line-color: darken(@stadium, 35%);
+        line-color: darken(@stadium, 5%);
       }
     }
   }

@@ -1,6 +1,6 @@
 @building-fill: #f8f8ff;  // Lch(84, 5, 68)
-@building-line: #f8f8ff;  // Lch(70, 9, 66)
-@building-low-zoom: #f8f8ff;
+@building-line: @building-fill;  // Lch(70, 9, 66)
+@building-low-zoom: @building-fill;
 
 @building-major-fill: darken(@building-fill, 10%);  // Lch(75, 8, 67)
 @building-major-line: darken(@building-major-fill, 15%);  // Lch(61, 13, 65)
@@ -11,10 +11,10 @@
 @entrance-normal: @building-line;
 
 #buildings {
-  [zoom >= 12] {
+  [zoom >= 10] {
     polygon-fill: @building-low-zoom;
     polygon-clip: false;
-    [zoom >= 13] {
+    [zoom >= 11] {
       polygon-fill: @building-fill;
       line-color: @building-line;
       line-width: .5;
@@ -26,10 +26,10 @@
     [building = 'train_station'],
     [public_transport = 'station'] {
       polygon-fill: @building-major-z14;
-      [zoom >= 13] {
+      [zoom >= 11] {
         polygon-fill: @building-major-z15;
         line-color: @building-major-line;
-        [zoom >= 14] {
+        [zoom >= 12] {
           polygon-fill: @building-major-fill;
         }
       }

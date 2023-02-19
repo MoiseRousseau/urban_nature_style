@@ -1,8 +1,8 @@
-@water-text: #4d80b3;
+@water-text: #20b2aa;
 @glacier: #87cefa;
 @glacier-line: #9cf;
 
-@waterway-text-repeat-distance: 200;
+@waterway-text-repeat-distance: 300;
 
 #water-areas {
   [natural = 'glacier']::natural {
@@ -36,7 +36,7 @@
 }
 
 #water-lines-low-zoom {
-  [waterway = 'river'][zoom >= 8][zoom < 12] {
+  [waterway = 'river'][zoom >= 8][zoom < 14] {
     [int_intermittent = 'yes'] {
       line-dasharray: 8,4;
       line-cap: butt;
@@ -44,9 +44,9 @@
       line-clip: false;
     }
     line-color: @water-color;
-    line-width: 0.7;
+    line-width: 2.7;
     [zoom >= 9] { line-width: 1.2; }
-    [zoom >= 10] { line-width: 1.6; }
+    [zoom >= 10] { line-width: 2.0; }
   }
 }
 
@@ -55,12 +55,12 @@
   [waterway = 'ditch'],
   [waterway = 'drain'] {
     [int_tunnel = 'no'] {
-      [int_intermittent != 'yes'][zoom >= 14],
+      [int_intermittent != 'yes'][zoom >= 12],
       [zoom >= 15] {
-        line-width: 2.5;
-        line-color: white;
-        [waterway = 'stream'][zoom >= 15] {
-          line-width: 3.5;
+        line-width: 0.5;
+        line-color: #20b2aa;
+        [waterway = 'stream'][zoom >= 13] {
+          line-width: 0.5;
         }
         [int_intermittent = 'yes'] {
           line-dasharray: 4,3;

@@ -1,41 +1,41 @@
 /* For the main linear features, such as roads and railways. */
 
 @tertiary-fill: #002147;
-@residential-fill: #002147;
+@residential-fill: @tertiary-fill;
 @service-fill: @residential-fill;
-@living-street-fill: #002147;
-@pedestrian-fill: #002147;
-@raceway-fill: #002147;
-@road-fill: #002147;
-@footway-fill: #002147;
-@footway-fill-noaccess: #002147;
+@living-street-fill: @tertiary-fill;
+@pedestrian-fill: @tertiary-fill;
+@raceway-fill: @tertiary-fill;
+@road-fill: @tertiary-fill;
+@footway-fill: @tertiary-fill;
+@footway-fill-noaccess: @tertiary-fill;
 @steps-fill: @footway-fill;
-@steps-fill-noaccess: #002147;
-@cycleway-fill: #002147;
-@cycleway-fill-noaccess: #002147;
-@bridleway-fill: #002147;
-@bridleway-fill-noaccess: #002147;
-@track-fill: #002147;
-@track-fill-noaccess: #002147;
-@platform-fill: #002147;
-@aeroway-fill: #002147;
+@steps-fill-noaccess: @tertiary-fill;
+@cycleway-fill: @tertiary-fill;
+@cycleway-fill-noaccess: @tertiary-fill;
+@bridleway-fill: @tertiary-fill;
+@bridleway-fill-noaccess: @tertiary-fill;
+@track-fill: @tertiary-fill;
+@track-fill-noaccess: @tertiary-fill;
+@platform-fill: @tertiary-fill;
+@aeroway-fill: @tertiary-fill;
 @runway-fill: @aeroway-fill;
 @taxiway-fill: @aeroway-fill;
 @helipad-fill: @aeroway-fill;
-@access-marking: #002147;
-@access-marking-primary: #002147;
-@access-marking-secondary: #002147;
-@access-marking-white-unpaved: #002147;
-@access-marking-road: #002147;
-@access-marking-living-street: #002147;
+@access-marking: @tertiary-fill;
+@access-marking-primary: @tertiary-fill;
+@access-marking-secondary: @tertiary-fill;
+@access-marking-white-unpaved: @tertiary-fill;
+@access-marking-road: @tertiary-fill;
+@access-marking-living-street: @tertiary-fill;
 
-@default-casing: #002147;
-@tertiary-casing: #002147;
-@residential-casing: #002147;
+@default-casing: @tertiary-fill;
+@tertiary-casing: @tertiary-fill;
+@residential-casing: @tertiary-fill;
 @road-casing: @residential-casing;
 @service-casing: @residential-casing;
 @living-street-casing: @residential-casing;
-@pedestrian-casing: #002147;
+@pedestrian-casing: @tertiary-fill;
 @path-casing: @default-casing;
 @footway-casing: @default-casing;
 @steps-casing: @default-casing;
@@ -43,16 +43,16 @@
 @bridleway-casing: @default-casing;
 @track-casing: @default-casing;
 
-@tertiary-shield: #002147;
+@tertiary-shield: @tertiary-fill;
 
 @unimportant-road: @residential-casing;
 
-@minor-construction: #aaa;
-@service-construction: #aaa;
+@minor-construction: @tertiary-fill;
+@service-construction: @tertiary-fill;
 
-@destination-marking: #c2e0ff;
-@private-marking: #efa9a9;
-@private-marking-for-red: #C26363;
+@destination-marking: @tertiary-fill;
+@private-marking: @tertiary-fill;
+@private-marking-for-red: @tertiary-fill;
 
 @tunnel-casing: grey;
 @bridge-casing: black;
@@ -109,14 +109,14 @@
 @motorway-link-width-z13:         4;
 @trunk-width-z13:                 6;
 @trunk-link-width-z13:             4;
-@primary-width-z13:               5;
-@primary-link-width-z13:          4;
-@secondary-width-z13:             5;
-@secondary-link-width-z13:        4;
-@tertiary-width-z13:              4;
-@tertiary-link-width-z13:         3;
-@residential-width-z13:           2.5;
-@living-street-width-z13:         2;
+@primary-width-z13:               2.5;
+@primary-link-width-z13:          2;
+@secondary-width-z13:             3.5;
+@secondary-link-width-z13:        2.5;
+@tertiary-width-z13:              2.5;
+@tertiary-link-width-z13:         2;
+@residential-width-z13:           1;
+@living-street-width-z13:         1;
 @bridleway-width-z13:             0.3;
 @footway-width-z14:               0.7;
 @cycleway-width-z13:              0.7;
@@ -3561,7 +3561,7 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
   }
 }
 
-#roads-text-ref-low-zoom[zoom < 13] {
+#roads-text-ref-low-zoom[zoom < 15] {
   [highway = 'motorway'][zoom >= 10],
   [highway = 'trunk'][zoom >= 11],
   [highway = 'primary'][zoom >= 11],
