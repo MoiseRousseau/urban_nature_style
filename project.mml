@@ -29,9 +29,9 @@ name: OpenStreetMap Carto
 description: A general-purpose OpenStreetMap mapnik style, in CartoCSS
 bounds: *world
 center:
-  - 9.1
-  - 42.15
-  - 9
+  - 8.749
+  - 41.926
+  - 13
 format: png
 interactivity: false
 minzoom: 0
@@ -57,6 +57,7 @@ Stylesheet:
   - style/admin.mss
   - style/addressing.mss
   - style/golf.mss
+  - style/hillshade.mss
 Layer:
   - id: landcover-low-zoom
     geometry: polygon
@@ -146,6 +147,14 @@ Layer:
     properties:
       cache-features: true
       minzoom: 10
+  - id: hillshade
+    geometry: raster
+    extent: [8.5, 41.8, 8.9, 42.1]
+    Datasource:
+      file: hillshade_raster/ajaccio-hillshade-10.tif
+      type: gdal
+    properties:
+      minzomm: 13
   - id: landcover-line
     geometry: linestring
     <<: *extents

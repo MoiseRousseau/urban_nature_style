@@ -1,1 +1,1 @@
-@power-line-color: #888;
+@power-line-color: #c19a6b;

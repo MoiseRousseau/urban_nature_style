@@ -1,4 +1,4 @@
-@building-fill: #f8f8ff;  // Lch(84, 5, 68)
+@building-fill: #c4c3d0;  // Lch(84, 55, 68)
 @building-line: @building-fill;  // Lch(70, 9, 66)
 @building-low-zoom: @building-fill;
 
