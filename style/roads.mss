@@ -92,16 +92,16 @@
 @secondary-width-z11:             1.1;
 @tertiary-width-z11:              0.7;
 
-@motorway-width-z12:              3.5;
-@motorway-link-width-z12:         1.5;
-@trunk-width-z12:                 3.5;
-@trunk-link-width-z12:            1.5;
-@primary-width-z12:               3.5;
-@primary-link-width-z12:          1.5;
-@secondary-width-z12:             3.5;
-@secondary-link-width-z12:        1.5;
-@tertiary-width-z12:              2.5;
-@tertiary-link-width-z12:         1.5;
+@motorway-width-z12:              2.5;
+@motorway-link-width-z12:         0.5;
+@trunk-width-z12:                 2.5;
+@trunk-link-width-z12:            0.5;
+@primary-width-z12:               2.5;
+@primary-link-width-z12:          0.5;
+@secondary-width-z12:             2.5;
+@secondary-link-width-z12:        0.5;
+@tertiary-width-z12:              1.5;
+@tertiary-link-width-z12:         0.5;
 @residential-width-z12:           0.5;
 @unclassified-width-z12:          0.8;
 
