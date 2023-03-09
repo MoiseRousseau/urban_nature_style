@@ -11,3 +11,10 @@
         raster-comp-op: src;
         raster-filter-factor:5;
 }
+
+#hillshade-paris {
+    raster-opacity: 0.4;
+    raster-scaling: bilinear;
+        raster-comp-op: src;
+        raster-filter-factor:5;
+}

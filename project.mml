@@ -154,7 +154,15 @@ Layer:
       file: hillshade_raster/ajaccio-hillshade-10.tif
       type: gdal
     properties:
-      minzomm: 13
+      minzomm: 12
+  - id: hillshade-paris
+    geometry: raster
+    extent: [2, 48.7, 2.6, 49]
+    Datasource:
+      file: hillshade_raster/paris-hillshade-10.tif
+      type: gdal
+    properties:
+      minzomm: 11
   - id: landcover-line
     geometry: linestring
     <<: *extents
